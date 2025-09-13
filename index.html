@@ -62,17 +62,31 @@ background:#1d4ed8;color:white;border:none;padding:8px;border-radius:6px;cursor:
 <h3>Trading Trash on Tricycles</h3>
 <p style="margin:0 0 4px 0; font-weight:normal; color:#777;">(with Ignacio Banares-Sanchez)</p>
 
-<div style="display:flex; gap:12px; margin:8px 0; background:#f9f9f9; padding:12px; border-radius:8px; align-items:flex-start;">
-  
+<div style="display:flex; gap:8px; margin:8px 0;">
   <!-- Abstract Button -->
-  <details style="flex:1; border-left:4px solid transparent; padding-left:8px; background:white; border-radius:6px; padding:8px;">
-    <summary style="cursor:pointer; font-weight:600;">Abstract</summary>
-    <p style="margin-top:4px;">Abstract text goes here. Replace with your actual abstract.</p>
-  </details>
+  <button id="abstract-btn" style="flex:1; padding:8px; border-radius:6px; border:1px solid #1d4ed8; background:white; cursor:pointer; color:#1d4ed8;">Abstract</button>
   
   <!-- PDF Button -->
-  <a href="assets/jobpaper.pdf" target="_blank" style="flex:1; text-align:center; text-decoration:none; padding:8px; background:#1d4ed8; color:white; border-radius:6px;">PDF</a>
+  <a href="assets/jobpaper.pdf" target="_blank" style="flex:1; text-align:center; text-decoration:none; padding:8px; border-radius:6px; border:1px solid #1d4ed8; background:white; color:#1d4ed8;">PDF</a>
 </div>
+
+<!-- Hidden abstract text -->
+<div id="abstract-text" style="display:none; border-left:4px solid #1d4ed8; padding-left:8px; margin-top:8px;">
+  <p>Abstract text goes here. Replace with your actual abstract.</p>
+</div>
+
+<script>
+  const btn = document.getElementById('abstract-btn');
+  const abstractDiv = document.getElementById('abstract-text');
+
+  btn.addEventListener('click', () => {
+    if(abstractDiv.style.display === 'none'){
+      abstractDiv.style.display = 'block';
+    } else {
+      abstractDiv.style.display = 'none';
+    }
+  });
+</script>
 </section>
 
 
