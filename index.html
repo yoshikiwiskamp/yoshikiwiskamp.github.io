@@ -1,81 +1,98 @@
 <!doctype html>
-footer{margin-top:36px;color:var(--muted);font-size:0.9rem}
-a{color:var(--accent)}
-@media (max-width:640px){header{flex-direction:column;align-items:flex-start}.logo{width:56px;height:56px}}
-/* small utility */
-.muted{color:var(--muted);font-size:0.95rem}
-</style>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Your Name — Researcher</title>
+  <style>
+    :root{--max-width:1000px;--accent:#1d4ed8;--muted:#6b7280}
+    body{font-family:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial;line-height:1.6;color:#111;background:#f7f7f8;margin:0;padding:0;display:flex;justify-content:center}
+    .container{max-width:var(--max-width);width:100%;padding:24px}
+
+    /* Layout: left sidebar, right main */
+    .layout{display:grid;grid-template-columns:280px 1fr;gap:32px}
+
+    header{margin-bottom:28px}
+    .sidebar h1{margin:0;font-size:1.6rem}
+    .sidebar p{margin:4px 0;color:var(--muted)}
+
+    section{margin:28px 0}
+    h2{margin-bottom:12px}
+    .card{padding:16px;border-radius:10px;background:#fff;box-shadow:0 1px 0 rgba(0,0,0,0.04);border:1px solid #eee;margin-bottom:16px}
+
+    details summary{cursor:pointer;font-weight:600;outline:none}
+    footer{margin-top:36px;color:var(--muted);font-size:0.9rem}
+    a{color:var(--accent)}
+
+    @media (max-width:700px){
+      .layout{grid-template-columns:1fr}
+      .sidebar{text-align:center}
+    }
+  </style>
 </head>
 <body>
-<div class="container">
-<header class="header">
-<div class="logo">YN</div>
-<div>
-<h1>Your Name</h1>
-<p class="lead">PhD Student / Researcher — Topic · University</p>
-<nav>
-<a href="#research">Research</a>
-<a href="#teaching">Teaching</a>
-<a href="#contact">Contact</a>
-</nav>
-</div>
-</header>
+  <div class="container">
+    <div class="layout">
+      <!-- Left side -->
+      <aside class="sidebar">
+        <header>
+          <h1>Your Name</h1>
+          <p>Affiliation · University / Institution</p>
+        </header>
+      </aside>
 
+      <!-- Right side -->
+      <main>
+        <section id="bio">
+          <h2>About Me</h2>
+          <p>Hello! I am a PhD student / researcher at [University]. My research focuses on [short bio — interests, fields, current projects].</p>
+        </section>
 
-<main>
-<section id="research">
-<h2>Research</h2>
+        <section id="research">
+          <h2>Working Papers</h2>
 
+          <div class="card">
+            <h3>Job Market Paper — Title</h3>
+            <p class="muted">Working paper · 2025 · <a href="assets/jobpaper.pdf">PDF</a></p>
+            <details>
+              <summary>Abstract (click to expand)</summary>
+              <p>Abstract text goes here. Replace with your actual abstract.</p>
+            </details>
+          </div>
 
-<div class="card">
-<h3>Job Market Paper — Title</h3>
-<p class="muted">Working paper · 2025 · <a href="assets/jobpaper.pdf">PDF</a></p>
-<details>
-<summary>Abstract (click to expand)</summary>
-<p>Short abstract goes here. Replace this text with your abstract. If you prefer, convert this to a separate page and link to it.</p>
-</details>
-</div>
+          <div class="card">
+            <h3>Working Paper — Title</h3>
+            <p class="muted">Preprint · <a href="assets/workingpaper1.pdf">PDF</a></p>
+            <details>
+              <summary>Abstract (click to expand)</summary>
+              <p>Another abstract goes here.</p>
+            </details>
+          </div>
+        </section>
 
+        <section id="teaching">
+          <h2>Teaching</h2>
+          <div class="card">
+            <ul>
+              <li>Course 1 — Short description</li>
+              <li>Course 2 — Short description</li>
+            </ul>
+          </div>
+        </section>
 
-<div class="card" style="margin-top:12px;">
-<h3>Working Paper — Title</h3>
-<p class="muted">Preprint · <a href="assets/workingpaper1.pdf">PDF</a></p>
-<details>
-<summary>Abstract (click to expand)</summary>
-<p>Another abstract here. Add authors, links to code or data, and a small DOI or SSRN link if available.</p>
-</details>
-</div>
+        <section id="contact">
+          <h2>Contact</h2>
+          <div class="card">
+            <p>Email: <a href="mailto:you@example.com">you@example.com</a></p>
+            <p>CV: <a href="assets/CV.pdf">Download CV (PDF)</a></p>
+          </div>
+        </section>
 
-
-</section>
-
-
-<section id="teaching">
-<h2>Teaching</h2>
-<div class="card">
-<ul>
-<li>Course 1 — Brief description</li>
-<li>Course 2 — Brief description</li>
-</ul>
-</div>
-</section>
-
-
-<section id="contact">
-<h2>Contact</h2>
-<div class="card">
-<p>Email: <a href="mailto:you@example.com">you@example.com</a></p>
-<p>CV: <a href="assets/CV.pdf">Download CV (PDF)</a></p>
-</div>
-</section>
-
-
-</main>
-
-
-<footer>
-<p>Made with ❤️ — Hosted on GitHub Pages</p>
-</footer>
-</div>
+        <footer>
+          <p>Made with ❤️ — Hosted on GitHub Pages</p>
+        </footer>
+      </main>
+    </div>
+  </div>
 </body>
 </html>
