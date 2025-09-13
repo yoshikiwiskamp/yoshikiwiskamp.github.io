@@ -5,15 +5,25 @@
 <meta name="viewport" content="width=device-width,initial-scale=1" />
 <title>Yoshiki Wiskamp — PhD Candidate</title>
 <style>
+/* All links same color, no underline */
+a {
+  color: rgb(29, 78, 216);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
 body{
-font-family:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial;
-line-height:1.6;
-color:#111;
-background:#fff;
-margin:0;
-padding:0;
-display:flex;
-justify-content:center;
+  font-family:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial;
+  line-height:1.6;
+  color:#111;
+  background:#fff;
+  margin:0;
+  padding:0;
+  display:flex;
+  justify-content:center;
 }
 .container{max-width:1000px;width:100%;padding:24px}
 .layout{display:grid;grid-template-columns:280px 1fr;gap:32px}
@@ -21,131 +31,131 @@ justify-content:center;
 .sidebar img{width:100%;border-radius:12px;margin:12px 0}
 .sidebar h1{margin:0;font-size:1.6rem}
 .sidebar p{margin:4px 0;color:#555}
-.sidebar a{color:#1d4ed8;text-decoration:none}
 section{margin:28px 0}
 h2{margin-bottom:12px}
 details summary{cursor:pointer;font-weight:600;outline:none}
 @media (max-width:700px){
-.layout{grid-template-columns:1fr}
-.sidebar{position:static;text-align:center}
+  .layout{grid-template-columns:1fr}
+  .sidebar{position:static;text-align:center}
 }
 button.pdf-button{
-background:#1d4ed8;color:white;border:none;padding:8px;border-radius:6px;cursor:pointer;flex:1;text-align:center;text-decoration:none;
+  background:#1d4ed8;color:white;border:none;padding:8px;border-radius:6px;cursor:pointer;flex:1;text-align:center;text-decoration:none;
 }
 </style>
 </head>
 <body>
 <div class="container">
-<div class="layout">
-<!-- Left side -->
-<aside class="sidebar">
-<header>
-<h1>Yoshiki Wiskamp</h1>
-<img src="images/me.jpg" alt="Yoshiki Wiskamp">
-<p>PhD Candidate in Economics</p>
-<p>London School of Economics</p>
-<p>Email: <a href="mailto:y.wiskamp@lse.ac.uk">y.wiskamp@lse.ac.uk</a></p>
-</header>
-</aside>
+  <div class="layout">
+    <!-- Left side -->
+    <aside class="sidebar">
+      <header>
+        <h1>Yoshiki Wiskamp</h1>
+        <img src="images/me.jpg" alt="Yoshiki Wiskamp">
+        <p>PhD Candidate in Economics</p>
+        <p>London School of Economics</p>
+        <p>Email: <a href="mailto:y.wiskamp@lse.ac.uk">y.wiskamp@lse.ac.uk</a></p>
+      </header>
+    </aside>
 
+    <!-- Right side -->
+    <main>
+      <section id="bio">
+        <h2>About Me</h2>
+        <p>Hello! I am a PhD student / researcher at [University]. My research focuses on [short bio — interests, fields, current projects].</p>
+      </section>
 
-<!-- Right side -->
-<main>
-<section id="bio">
-<h2>About Me</h2>
-<p>Hello! I am a PhD student / researcher at [University]. My research focuses on [short bio — interests, fields, current projects].</p>
-</section>
+      <hr style="border:none; border-top:1px solid #ddd; margin:24px 0;">
 
-<hr style="border:none; border-top:1px solid #ddd; margin:24px 0;">
+      <section id="working-papers">
+        <h2>Working Papers</h2>
+        <h3>Trading Trash on Tricycles</h3>
+        <p style="margin:0; font-weight:normal; color:#777;">(with Ignacio Banares-Sanchez)</p>
 
-<section id="working-papers">
-<h2>Working Papers</h2>
-<h3>Trading Trash on Tricycles</h3>
-<p style="margin:0; font-weight:normal; color:#777;">(with Ignacio Banares-Sanchez)</p>
+        <div style="margin:4px 0; font-size:0.85rem; color:rgb(29,78,216); display:flex; align-items:center; gap:4px;">
+          <!-- Opening bracket -->
+          <span>[</span>
 
-<div style="margin:4px 0; font-size:0.85rem; color:#1d4ed8; display:flex; align-items:center; gap:4px;">
-  <!-- Opening bracket -->
-  <span>[</span>
+          <!-- Abstract link with arrow -->
+          <a href="#" id="abstract-link" style="display:flex; align-items:center; gap:4px; cursor:pointer;">
+            <span id="abstract-arrow" style="transition: transform 0.2s;">▸</span>
+            Abstract
+          </a>
 
-  <!-- Abstract link with arrow -->
-  <a href="#" id="abstract-link" style="text-decoration:none; cursor:pointer; display:flex; align-items:center; gap:4px;">
-    <span id="abstract-arrow" style="transition: transform 0.2s;">▸</span>
-    Abstract
-  </a>
+          <!-- Separator -->
+          <span style="color:#888;">|</span>
 
-  <!-- Separator -->
-  <span style="color:#888;">|</span>
+          <!-- PDF link -->
+          <a href="assets/jobpaper.pdf" target="_blank">PDF</a>
 
-  <!-- PDF link -->
-  <a href="assets/jobpaper.pdf" target="_blank" style="text-decoration:none;">PDF</a>
+          <!-- Closing bracket -->
+          <span>]</span>
+        </div>
 
-  <!-- Closing bracket -->
-  <span>]</span>
+        <!-- Hidden abstract text -->
+        <div id="abstract-text" style="display:none; border-left:4px solid #1d4ed8; padding:12px; margin-top:4px; background:#fafafa; border-radius:6px; text-align:justify;">
+          <p style="margin:2px 0; font-size:0.85rem;">Low regulatory and fiscal capacity limit the set of policy instruments available for municipal governments to control the externalities arising from density. Citizens resort to unregulated markets for service provision, but these leave externalities unaddressed. We build a structural model of solid waste collection and disposal, and estimate it using experimental variation and bespoke data we collect in Accra; through surveys with households and informal collectors, and a self-developed smartphone application. We estimate households' discrete choice demand system using BDM, TIOLI, and stated preference experiments. We estimate waste collectors' routing problem using a field experiment in which we subsidise disposal at waste transfer stations. Downstream subsidies at transfer stations can correct environmental externalities unpriced by the market. Counterfactual price subsidies of 50% at current transfer stations achieve socially optimal levels of waste pollution for the set of active disposal sites. Their gains in terms of pollution reduction exceed that of new infrastructure development. Our results suggests that in settings with low fiscal and regulatory capacity, limited pricing policy can help internalise environmental costs, effectively delivering public services by leveraging informal markets.</p>
+        </div>
+
+        <script>
+          const link = document.getElementById('abstract-link');
+          const abstractDiv = document.getElementById('abstract-text');
+          const arrow = document.getElementById('abstract-arrow');
+
+          link.addEventListener('click', (e) => {
+            e.preventDefault(); // prevent page jump
+            if(abstractDiv.style.display === 'none'){
+              abstractDiv.style.display = 'block';
+              arrow.style.transform = 'rotate(90deg)'; // point down
+            } else {
+              abstractDiv.style.display = 'none';
+              arrow.style.transform = 'rotate(0deg)'; // point right
+            }
+          });
+        </script>
+      </section>
+
+      <hr style="border:none; border-top:1px solid #ddd; margin:24px 0;">
+
+      <section id="work-in-progress">
+        <h2>Work in Progress</h2>
+        <p>Brief description of ongoing projects or preprints.</p>
+      </section>
+
+      <hr style="border:none; border-top:1px solid #ddd; margin:24px 0;">
+      
+      <section id="policy">
+        <h2>Policy</h2>
+        <p>Brief description of policy-oriented work, reports, or contributions.</p>
+      </section>
+      
+      <hr style="border:none; border-top:1px solid #ddd; margin:24px 0;">
+
+      <section id="teaching">
+        <h2>Teaching</h2>
+        <ul style="list-style:none; padding-left:0; margin-left:0;">
+          <li>Microeconomics I for undergraduate students (2022)</li>
+          <li>Microeconomics II for undergraduate students (2023)</li>
+          <li>Macroeconomics I for undergraduate students (2023, 2024)</li>
+          <li>Development Economics for undergraduate students (2024, 2025, 2026)</li>
+          <li>IZA/FCDO G²LM|LIC ONLINE Development Economics Course (2025)</li>
+        </ul>
+      </section>
+    </main>
+  </div>
 </div>
 
-<!-- Hidden abstract text -->
-<div id="abstract-text" style="display:none; border-left:4px solid #1d4ed8; padding:12px; margin-top:4px; background:#fafafa; border-radius:6px; text-align:justify;">
-  <p style="margin:2px 0; font-size:0.85rem;">Low regulatory and fiscal capacity limit the set of policy instruments available for municipal governments to control the externalities arising from density. Citizens resort to unregulated markets for service provision, but these leave externalities unaddressed. We build a structural model of solid waste collection and disposal, and estimate it using experimental variation and bespoke data we collect in Accra; through surveys with households and informal collectors, and a self-developed smartphone application. We estimate households' discrete choice demand system using BDM, TIOLI, and stated preference experiments. We estimate waste collectors' routing problem using a field experiment in which we subsidise disposal at waste transfer stations. Downstream subsidies at transfer stations can correct environmental externalities unpriced by the market. Counterfactual price subsidies of 50\% at current transfer stations achieve socially optimal levels of waste pollution for the set of active disposal sites. Their gains in terms of pollution reduction exceed that of new infrastructure development. Our results suggests that in settings with low fiscal and regulatory capacity, limited pricing policy can help internalise environmental costs, effectively delivering public services by leveraging informal markets.</p>
-</div>
-
-<script>
-  const link = document.getElementById('abstract-link');
-  const abstractDiv = document.getElementById('abstract-text');
-  const arrow = document.getElementById('abstract-arrow');
-
-  link.addEventListener('click', (e) => {
-    e.preventDefault(); // prevent page jump
-    if(abstractDiv.style.display === 'none'){
-      abstractDiv.style.display = 'block';
-      arrow.style.transform = 'rotate(90deg)'; // point down
-    } else {
-      abstractDiv.style.display = 'none';
-      arrow.style.transform = 'rotate(0deg)'; // point right
-    }
-  });
-</script>
-</section>
-
-<hr style="border:none; border-top:1px solid #ddd; margin:24px 0;">
-
-<section id="work-in-progress">
-<h2>Work in Progress</h2>
-<p>Brief description of ongoing projects or preprints.</p>
-</section>
-
-<hr style="border:none; border-top:1px solid #ddd; margin:24px 0;">
-  
-<section id="policy">
-<h2>Policy</h2>
-<p>Brief description of policy-oriented work, reports, or contributions.</p>
-</section>
-  
-<hr style="border:none; border-top:1px solid #ddd; margin:24px 0;">
-
-<section id="teaching">
-<h2>Teaching</h2>
-<ul style="list-style:none; padding-left:0; margin-left:0;">
-<li>Microeconomics I for undergraduate students (2022)</li>
-<li>Microeconomics II for undergraduate students (2023)</li>
-<li>Macroeconomics I for undergraduate students (2023, 2024)</li>
-<li>Development Economics for undergraduate students (2024, 2025, 2026)</li>
-<li>IZA/FCDO G²LM|LIC ONLINE Development Economics Course (2025)</li>
-</ul>
-</section>
-</main>
-</div>
-</div>
 <script>
 // Highlight left border when abstract <details> is open
 document.querySelectorAll('details').forEach(d => {
-d.addEventListener('toggle', () => {
-if(d.open){
-d.style.borderLeft = '4px solid #1d4ed8';
-} else {
-d.style.borderLeft = '4px solid transparent';
-}
-});
+  d.addEventListener('toggle', () => {
+    if(d.open){
+      d.style.borderLeft = '4px solid #1d4ed8';
+    } else {
+      d.style.borderLeft = '4px solid transparent';
+    }
+  });
 });
 </script>
 </body>
 </html>
+
