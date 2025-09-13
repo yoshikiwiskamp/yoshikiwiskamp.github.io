@@ -16,26 +16,21 @@ display:flex;
 justify-content:center;
 }
 .container{max-width:1000px;width:100%;padding:24px}
-
-
 .layout{display:grid;grid-template-columns:280px 1fr;gap:32px}
-
-
 .sidebar{position:sticky;top:24px;height:fit-content;align-self:start}
 .sidebar img{width:100%;border-radius:12px;margin:12px 0}
 .sidebar h1{margin:0;font-size:1.6rem}
 .sidebar p{margin:4px 0;color:#555}
 .sidebar a{color:#1d4ed8;text-decoration:none}
-
-
 section{margin:28px 0}
 h2{margin-bottom:12px}
 details summary{cursor:pointer;font-weight:600;outline:none}
-
-
 @media (max-width:700px){
 .layout{grid-template-columns:1fr}
 .sidebar{position:static;text-align:center}
+}
+button.pdf-button{
+background:#1d4ed8;color:white;border:none;padding:8px;border-radius:6px;cursor:pointer;flex:1;text-align:center;text-decoration:none;
 }
 </style>
 </head>
@@ -65,12 +60,16 @@ details summary{cursor:pointer;font-weight:600;outline:none}
 <section id="working-papers">
 <h2>Working Papers</h2>
 <h3>Trading Trash on Tricycles</h3>
-<p style="margin:2px 0; font-weight:normal;">(with Ignacio Banares-Sanchez)</p>
-<p class="muted">Working paper · 2025 · <a href="assets/jobpaper.pdf">PDF</a></p>
-<details>
-<summary>Abstract</summary>
-<p>Abstract text goes here. Replace with your actual abstract.</p>
+<p style="margin:0 0 4px 0; font-weight:normal; color:#777;">(with Ignacio Banares-Sanchez)</p>
+<div style="display:flex; gap:12px; margin:8px 0; align-items:flex-start;">
+<!-- Abstract Button -->
+<details style="flex:1; border-left:4px solid transparent; padding-left:8px;">
+<summary style="cursor:pointer; font-weight:600;">Abstract</summary>
+<p style="margin-top:4px;">Abstract text goes here. Replace with your actual abstract.</p>
 </details>
+<!-- PDF Button -->
+<a href="assets/jobpaper.pdf" target="_blank" class="pdf-button">PDF</a>
+</div>
 </section>
 
 
@@ -96,5 +95,17 @@ details summary{cursor:pointer;font-weight:600;outline:none}
 </main>
 </div>
 </div>
+<script>
+// Highlight left border when abstract <details> is open
+document.querySelectorAll('details').forEach(d => {
+d.addEventListener('toggle', () => {
+if(d.open){
+d.style.borderLeft = '4px solid #1d4ed8';
+} else {
+d.style.borderLeft = '4px solid transparent';
+}
+});
+});
+</script>
 </body>
 </html>
