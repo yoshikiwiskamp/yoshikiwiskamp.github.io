@@ -63,9 +63,11 @@ background:#1d4ed8;color:white;border:none;padding:8px;border-radius:6px;cursor:
 <p style="margin:0 0 4px 0; font-weight:normal; color:#777;">(with Ignacio Banares-Sanchez)</p>
 
 <div style="display:flex; gap:8px; margin:8px 0;">
-  <!-- Abstract Button -->
-  <button id="abstract-btn" style="flex:1; padding:8px; border-radius:6px; border:1px solid #1d4ed8; background:white; cursor:pointer; color:#1d4ed8;">Abstract</button>
-  
+  <!-- Abstract Button with arrow -->
+  <button id="abstract-btn" style="flex:1; padding:8px; border-radius:6px; border:1px solid #1d4ed8; background:white; cursor:pointer; color:#1d4ed8; display:flex; justify-content:space-between; align-items:center;">
+    Abstract <span id="abstract-arrow" style="transition: transform 0.2s;">▸</span>
+  </button>
+
   <!-- PDF Button -->
   <a href="assets/jobpaper.pdf" target="_blank" style="flex:1; text-align:center; text-decoration:none; padding:8px; border-radius:6px; border:1px solid #1d4ed8; background:white; color:#1d4ed8;">PDF</a>
 </div>
@@ -78,12 +80,15 @@ background:#1d4ed8;color:white;border:none;padding:8px;border-radius:6px;cursor:
 <script>
   const btn = document.getElementById('abstract-btn');
   const abstractDiv = document.getElementById('abstract-text');
+  const arrow = document.getElementById('abstract-arrow');
 
   btn.addEventListener('click', () => {
     if(abstractDiv.style.display === 'none'){
       abstractDiv.style.display = 'block';
+      arrow.style.transform = 'rotate(90deg)'; // point down
     } else {
       abstractDiv.style.display = 'none';
+      arrow.style.transform = 'rotate(0deg)'; // point right
     }
   });
 </script>
