@@ -4,6 +4,10 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1" />
 <title>Yoshiki Wiskamp — PhD Candidate</title>
+
+<!-- Add LSE site icon -->
+<link rel="icon" href="images/LSE_logo.png" type="image/png">
+
 <style>
 /* All links same color, no underline */
 a {
@@ -28,7 +32,13 @@ body{
 .container{max-width:1000px;width:100%;padding:24px}
 .layout{display:grid;grid-template-columns:280px 1fr;gap:32px}
 .sidebar{position:sticky;top:24px;height:fit-content;align-self:start}
-.sidebar img{width:100%;border-radius:12px;margin:12px 0}
+.sidebar img {
+  width: 210px;       /* adjust as needed */
+  height: auto;       /* keeps proportions */
+  border-radius: 12px;
+  margin: 12px 0;     /* only top/bottom spacing */
+  display: block;     /* ensures it starts on its own line */
+}
 .sidebar h1{margin:0;font-size:1.6rem}
 .sidebar p{margin:4px 0;color:#555}
 section{margin:28px 0}
@@ -38,6 +48,12 @@ details summary{cursor:pointer;font-weight:600;outline:none}
 @media (max-width:700px){
   .layout{grid-template-columns:1fr}
   .sidebar{position:static;text-align:center}
+}
+@media (max-width: 700px) {
+  .sidebar img {
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 button.pdf-button{
   background:#1d4ed8;color:white;border:none;padding:8px;border-radius:6px;cursor:pointer;flex:1;text-align:center;text-decoration:none;
@@ -51,7 +67,7 @@ button.pdf-button{
     <aside class="sidebar">
       <header>
         <h1>Yoshiki Wiskamp</h1>
-        <img src="images/me.jpg" alt="Yoshiki Wiskamp">
+        <img src="images/Yoshiki_Wiskamp_picture.jpg" alt="Yoshiki Wiskamp">
         <p>PhD Candidate in Economics</p>
         <p>London School of Economics</p>
         <p>Email: <a href="mailto:y.wiskamp@lse.ac.uk">y.wiskamp@lse.ac.uk</a></p>
@@ -63,7 +79,7 @@ button.pdf-button{
       <section id="bio">
         <p style="text-align: justify;">
   Hello! I am a PhD Candidate in Economics at the London School of Economics and Political Science, where I am affiliated with 
-  <a href="https://sticerd.lse.ac.uk/" target="_blank">STICERD</a>. I work on topics in environmental and development economics with a focus on cities using tools from spatial economics.
+  <a href="https://sticerd.lse.ac.uk/" target="_blank">STICERD</a>. I work on topics in environmental and development economics, using structural models from spatial economics, field experiments, and historical data.
 </p>
       </section>
 
@@ -85,10 +101,11 @@ button.pdf-button{
           </a>
           
           <!-- Separator -->
-          <span style="color:#888;">|</span>
+          <span style="color:(1,80,140);">|</span>
 
           <!-- PDF link -->
-          <a href="assets/jobpaper.pdf" target="_blank">PDF</a>
+          <span style="color:#888;">draft coming soon</span>
+          <!-- <a href="papers/Trading_Trash_on_Tricycles.pdf" target="_blank">PDF</a> -->
 
           <!-- Closing bracket -->
           <span>]</span>
@@ -96,7 +113,7 @@ button.pdf-button{
 
         <!-- Hidden abstract text -->
         <div id="abstract-text" style="display:none; border-left:4px solid rgba(1,80,140,0.8); padding:12px; margin-top:4px; background:#fafafa; border-radius:6px; text-align:justify;">
-          <p style="margin:2px 0; font-size:0.85rem;">Low regulatory and fiscal capacity limit the set of policy instruments available for municipal governments to control the externalities arising from density. Citizens resort to unregulated markets for service provision, but these leave externalities unaddressed. We build a structural model of solid waste collection and disposal, and estimate it using experimental variation and bespoke data we collect in Accra; through surveys with households and informal collectors, and a self-developed smartphone application. We estimate households' discrete choice demand system using BDM, TIOLI, and stated preference experiments. We estimate waste collectors' routing problem using a field experiment in which we subsidise disposal at waste transfer stations. Downstream subsidies at transfer stations can correct environmental externalities unpriced by the market. Counterfactual price subsidies of 50% at current transfer stations achieve socially optimal levels of waste pollution for the set of active disposal sites. Their gains in terms of pollution reduction exceed that of new infrastructure development. Our results suggests that in settings with low fiscal and regulatory capacity, limited pricing policy can help internalise environmental costs, effectively delivering public services by leveraging informal markets.</p>
+          <p style="margin:2px 0; font-size:0.85rem;">Large rates of urbanisation come with externalities arising from density. These are particularly pronounced in the case of uncontrolled trash disposal. Low enforcement and fiscal capacity make local governments slow to respond to these challenges and leave space for unregulated private provision, which fails to address vast environmental and health damages. We develop a smartphone application and conduct surveys with households and informal waste collectors, to map the whole market and infrastructure for trash collection and disposal in Accra, Ghana. Leveraging experimental variation and our rich bespoke data, we estimate a structural model that captures the decisions of households, informal collectors, and disposal site operators. Counterfactual results show that halving fees at waste transfer stations correct unpriced externalities up to the social planner's choice. Welfare gains exceed policy implementation costs, but these are substantial, reaching 55% of the current budget for solid waste management. The construction of planned new infrastructure achieves lower effectiveness and requires higher costs than pricing policies. In settings with low fiscal and regulatory capacity, where direct provision, bans, or first-best pollution taxes are not feasible, limited second-best regulation can internalise environmental costs, providing a path for public service delivery through informal markets.</p>
         </div>
 
         <script>
@@ -141,8 +158,8 @@ button.pdf-button{
         <ul style="list-style:none; padding-left:0; margin-left:0;">
           <li>Microeconomics I for undergraduate students (2022)</li>
           <li>Microeconomics II for undergraduate students (2023)</li>
-          <li>Macroeconomics I for undergraduate students (2023, 2024)</li>
-          <li>Development Economics for undergraduate students (2024, 2025, 2026)</li>
+          <li>Macroeconomics I for undergraduate students (2023-2024)</li>
+          <li>Development Economics for undergraduate students (2024-2026)</li>
           <li>IZA/FCDO G²LM|LIC ONLINE Development Economics Course (2025)</li>
         </ul>
       </section>
