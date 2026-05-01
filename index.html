@@ -8,6 +8,10 @@
 <!-- Add LSE site icon -->
 <link rel="icon" href="images/LSE_logo.png" type="image/png">
 
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;600&display=swap" rel="stylesheet">
+
 <style>
 /* All links same color, no underline */
 a {
@@ -20,7 +24,7 @@ a:hover {
 }
 
 body{
-  font-family:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial;
+  font-family:'Noto Sans','Helvetica Neue',Helvetica,Arial,sans-serif;
   line-height:1.6;
   color:#111;
   background:#fff;
@@ -31,29 +35,31 @@ body{
 }
 .container{max-width:1000px;width:100%;padding:24px}
 .layout{display:grid;grid-template-columns:280px 1fr;gap:32px}
-.sidebar{position:sticky;top:24px;height:fit-content;align-self:start}
+.sidebar{position:sticky;top:24px;height:fit-content;align-self:start;text-align:center;}
 .sidebar img {
   width: 210px;       /* adjust as needed */
   height: auto;       /* keeps proportions */
   border-radius: 12px;
-  margin: 12px 0;     /* only top/bottom spacing */
+  margin: 12px auto;  /* centre horizontally */
   display: block;     /* ensures it starts on its own line */
 }
 .sidebar h1{margin:0;font-size:1.6rem}
-.sidebar p{margin:4px 0;color:#555}
+.sidebar p{margin:4px 0;color:#555;font-size:0.9rem;text-align:center;}
 section{margin:28px 0}
-h2{margin-bottom:12px}
-h3{margin-top:0; margin-bottom:4px;}
+h2{margin-bottom:12px;text-transform:uppercase;letter-spacing:0.05em;font-size:1.1rem;}
+h3{margin-top:0; margin-bottom:4px;font-size:1rem;}
 details summary{cursor:pointer;font-weight:600;outline:none}
 @media (max-width:700px){
   .layout{grid-template-columns:1fr}
   .sidebar{position:static;text-align:center}
-}
-@media (max-width: 700px) {
-  .sidebar img {
-    margin-left: auto;
-    margin-right: auto;
-  }
+  .sidebar img{margin-left:auto;margin-right:auto;}
+  .container{padding:16px}
+  .sidebar h1{font-size:1.4rem}
+  h2{font-size:1.1rem}
+  h3{font-size:1rem}
+  section{margin:20px 0}
+  /* shrink link rows to fit on one line */
+  div[style*="display:flex"]{font-size:0.8rem;}
 }
 button.pdf-button{
   background:#1d4ed8;color:white;border:none;padding:8px;border-radius:6px;cursor:pointer;flex:1;text-align:center;text-decoration:none;
@@ -67,6 +73,7 @@ button.pdf-button{
     <aside class="sidebar">
       <header>
         <h1>Yoshiki Wiskamp</h1>
+        <hr style="border:none; border-top:1px solid rgba(0,0,0,0.6); margin:8px auto; width:210px;">
         <img src="images/Yoshiki_Wiskamp_picture.jpg" alt="Yoshiki Wiskamp">
         <p>PhD Candidate in Economics</p>
         <p>London School of Economics</p>
@@ -77,30 +84,30 @@ button.pdf-button{
     <!-- Right side -->
     <main>
       <section id="bio">
-        <p style="text-align: justify;">
+        <p style="text-align: justify; font-size:0.9rem;">
   Hello! I am a PhD Candidate in Economics at the London School of Economics and Political Science, where I am affiliated with 
   <a href="https://sticerd.lse.ac.uk/" target="_blank">STICERD</a>. I work on topics in environmental and development economics, using structural models from spatial economics, field experiments, and historical data.
 </p>
+        <p style="text-align: justify; font-size:0.9rem;">You can find my CV <a href="cv/CV_Yoshiki_Wiskamp.pdf" target="_blank">here</a>.</p>
       </section>
-
-      <hr style="border:none; border-top:1px solid #ddd; margin:24px 0;">
 
       <section id="working-papers">
         <h2>Working Papers</h2>
+        <hr style="border:none; border-top:1px solid rgba(0,0,0,0.6); margin:12px 0 20px 0;">
         <h3>Trading Trash on Tricycles</h3>
-        <!-- <p style="margin:0; font-weight:normal; color:#777;">(with Ignacio Banares-Sanchez)</p> -->
-        <p style="margin:0; font-weight:normal; color:#777;">
+        <!-- <p style="margin:0; font-weight:normal; color:#777; font-size:0.9rem;">(with Ignacio Banares-Sanchez)</p> -->
+        <p style="margin:0; font-weight:normal; color:#777; font-size:0.9rem;">
           (with <a href="https://ignaciobanares.com" target="_blank" style="color:#777; text-decoration:none; pointer-events:auto;">Ignacio Banares-Sanchez</a>)
         </p>
 
-        <div style="margin:4px 0; font-size:1rem; color:rgb(1,80,140); display:flex; align-items:center; gap:4px;">
+        <div style="margin:4px 0; font-size:0.9rem; color:rgb(1,80,140); display:flex; align-items:center; gap:4px;">
           <!-- Opening bracket -->
           <span>[</span>
 
           <!-- Abstract link with arrow -->
           <a href="#" id="abstract-link" style="display:flex; align-items:center; gap:4px; cursor:pointer;"> 
             <span id="abstract-arrow" style="transition: transform 0.2s;">▸</span> 
-            abstract 
+            Abstract
           </a>
           
           <!-- Separator -->
@@ -108,10 +115,24 @@ button.pdf-button{
 
           <!-- PDF link -->
           <!-- <span style="color:#888;">draft coming soon</span> -->
-          <a href="https://ibanaressanchez.github.io/jmp.pdf" target="_blank">paper</a>
+          <a href="papers/Trading_Trash_on_Tricycles_2025.pdf" target="_blank">Paper</a>
+
+          <!-- Separator -->
+          <span style="color:(1,80,140);">|</span>
+
+          <!-- Funders & Partners link -->
+          <a href="#" id="funders-link" style="display:flex; align-items:center; gap:4px; cursor:pointer;">
+            <span id="funders-arrow" style="transition: transform 0.2s;">▸</span>
+            Partners
+          </a>
 
           <!-- Closing bracket -->
           <span>]</span>
+        </div>
+
+        <!-- Hidden funders text -->
+        <div id="funders-text" style="display:none; border-left:4px solid rgba(1,80,140,0.8); padding:12px; margin-top:4px; background:#fafafa; border-radius:6px; text-align:justify;">
+          <p style="margin:2px 0; font-size:0.85rem;"><strong>Partners:</strong> International Growth Centre, Suntory and Toyota International Centres for Economics and Related Disciplines, Innovations for Poverty Action, DataPlas Ghana</p>
         </div>
 
         <!-- Hidden abstract text -->
@@ -125,54 +146,122 @@ button.pdf-button{
           const arrow = document.getElementById('abstract-arrow');
 
           link.addEventListener('click', (e) => {
-            e.preventDefault(); // prevent page jump
+            e.preventDefault();
             if(abstractDiv.style.display === 'none'){
               abstractDiv.style.display = 'block';
-              arrow.style.transform = 'rotate(90deg)'; // point down
+              arrow.style.transform = 'rotate(90deg)';
             } else {
               abstractDiv.style.display = 'none';
-              arrow.style.transform = 'rotate(0deg)'; // point right
+              arrow.style.transform = 'rotate(0deg)';
+            }
+          });
+
+          const fundersLink = document.getElementById('funders-link');
+          const fundersDiv = document.getElementById('funders-text');
+          const fundersArrow = document.getElementById('funders-arrow');
+
+          fundersLink.addEventListener('click', (e) => {
+            e.preventDefault();
+            if (fundersDiv.style.display === 'none') {
+              fundersDiv.style.display = 'block';
+              fundersArrow.style.transform = 'rotate(90deg)';
+            } else {
+              fundersDiv.style.display = 'none';
+              fundersArrow.style.transform = 'rotate(0deg)';
             }
           });
         </script>
       </section>
 
-      <hr style="border:none; border-top:1px solid #ddd; margin:24px 0;">
-
       <section id="work-in-progress">
         <h2>Work in Progress</h2>
+        <hr style="border:none; border-top:1px solid rgba(0,0,0,0.6); margin:12px 0 20px 0;">
         <h3>Channeling Density: Sewerage Investments in 19th-Century Paris</h3>
-        <!-- <p style="margin:0; font-weight:normal; color:#777;">(with Ignacio Banares-Sanchez)</p> -->
+        <!-- <p style="margin:0; font-weight:normal; color:#777; font-size:0.9rem;">(with Ignacio Banares-Sanchez)</p> -->
         
-        <p style="margin:0; font-weight:normal; color:#777;">
+        <p style="margin:0; font-weight:normal; color:#777; font-size:0.9rem;">
           (with <a href="https://ignaciobanares.com" target="_blank" style="color:#777; text-decoration:none; pointer-events:auto;">Ignacio Banares-Sanchez</a>)
         </p>
-      </section>
 
-      <hr style="border:none; border-top:1px solid #ddd; margin:24px 0;">
-      
-      <section id="policy">
-        <h2>Policy Work</h2>
-        <h3>Urban water and sanitation systems: Managing infrastructure, institutions and access</h3>
-        <p style="margin:0; font-weight:normal; color:#777;">(with Ignacio Banares-Sanchez, Mikey Blake, Victoria Delbridge, and Edward Glaeser)</p>
-        <p style="margin:0; font-weight:normal;"><em>IGC Synthesis Paper, 2026</em></p>
-        <div style="margin:4px 0; font-size:1rem; color:rgb(1,80,140); display:flex; align-items:center; gap:4px;">
+        <div style="margin:4px 0; font-size:0.9rem; color:rgb(1,80,140); display:flex; align-items:center; gap:4px;">
           <span>[</span>
-          <a href="papers/Urban-water-sanitation-systems.pdf" target="_blank">paper</a>
+          <a href="#" id="abstract-link-paris" style="display:flex; align-items:center; gap:4px; cursor:pointer;">
+            <span id="abstract-arrow-paris" style="transition: transform 0.2s;">▸</span>
+            Abstract
+          </a>
           <span>]</span>
         </div>
+
+        <div id="abstract-text-paris" style="display:none; border-left:4px solid rgba(1,80,140,0.8); padding:12px; margin-top:4px; background:#fafafa; border-radius:6px; text-align:justify;">
+          <p style="margin:2px 0; font-size:0.85rem;">Urban density promises agglomeration benefits but also gives rise to pollution and disease transmission. Large-scale sanitation investments may therefore be essential to harness the benefits of density by increasing the attractiveness of locations as residential and marketplaces and by reducing negative sanitation externalities. To study how sewerage investments shape the long-run development of cities, we compile a novel address-level dataset spanning the entire construction period of the Parisian sewerage network during the nineteenth century. We present event-study evidence on how sewer construction affected population density, firm locations, land values, and disease incidence. Preliminary findings suggest an increase in land values and an increased presence of service and retail businesses in locations that received sewer access during the main expansion period. Leveraging an urban model, we structurally estimate the impact of sewers on location-specific amenities and location–sector-specific productivity, as well as the strength of externalities. Through counterfactual analyses, we assess the welfare impacts and cost–benefit of sewerage investments and disentangle the general equilibrium channels through which sewerage investments shaped the development of modern Paris.</p>
+        </div>
+
+        <script>
+          const linkParis = document.getElementById('abstract-link-paris');
+          const abstractDivParis = document.getElementById('abstract-text-paris');
+          const arrowParis = document.getElementById('abstract-arrow-paris');
+
+          linkParis.addEventListener('click', (e) => {
+            e.preventDefault();
+            if (abstractDivParis.style.display === 'none') {
+              abstractDivParis.style.display = 'block';
+              arrowParis.style.transform = 'rotate(90deg)';
+            } else {
+              abstractDivParis.style.display = 'none';
+              arrowParis.style.transform = 'rotate(0deg)';
+            }
+          });
+        </script>
       </section>
 
-      <hr style="border:none; border-top:1px solid #ddd; margin:24px 0;">
+      <section id="policy">
+        <h2>Policy Work</h2>
+        <hr style="border:none; border-top:1px solid rgba(0,0,0,0.6); margin:12px 0 20px 0;">
+        <h3>Urban water and sanitation systems: Managing infrastructure, institutions and access</h3>
+        <p style="margin:0; font-weight:normal; color:#777; font-size:0.9rem;">(with Ignacio Banares-Sanchez, Mikey Blake, Victoria Delbridge, and Edward Glaeser)</p>
+        <p style="margin:0; font-weight:normal; font-size:0.9rem;"><em>IGC Synthesis Paper, 2026</em></p>
+        <div style="margin:4px 0; font-size:0.9rem; color:rgb(1,80,140); display:flex; align-items:center; gap:4px;">
+          <span>[</span>
+          <a href="#" id="contents-link-policy" style="display:flex; align-items:center; gap:4px; cursor:pointer;">
+            <span id="contents-arrow-policy" style="transition: transform 0.2s;">▸</span>
+            Overview
+          </a>
+          <span style="color:(1,80,140);">|</span>
+          <a href="papers/Urban-water-sanitation-systems.pdf" target="_blank">Paper</a>
+          <span>]</span>
+        </div>
+
+        <div id="contents-text-policy" style="display:none; border-left:4px solid rgba(1,80,140,0.8); padding:12px; margin-top:4px; background:#fafafa; border-radius:6px; text-align:justify;">
+          <p style="margin:2px 0; font-size:0.85rem;">This paper focuses on how city leaders can deliver clean water and sanitation efficiently, affordably, and at scale. It first explores how to choose the right technologies for different urban contexts, balancing cost, density, and long-term maintenance. It then considers who should provide these services, from public utilities to public–private partnerships and informal providers, and how governments can structure their involvement. The paper next examines how to finance water and sanitation systems, from major trunk infrastructure to household connections and ongoing maintenance, and how to incentivise household uptake through subsidies, fines, and microfinance. It also looks at how to shape behaviour through information campaigns and social norms, and how to strengthen institutions, regulation, and contracting to make these systems work sustainably. Together, these sections provide a roadmap for cities to turn water and sanitation investment into lasting health, productivity, and environmental gains.</p>
+        </div>
+
+        <script>
+          const contentsLinkPolicy = document.getElementById('contents-link-policy');
+          const contentsDivPolicy = document.getElementById('contents-text-policy');
+          const contentsArrowPolicy = document.getElementById('contents-arrow-policy');
+
+          contentsLinkPolicy.addEventListener('click', (e) => {
+            e.preventDefault();
+            if (contentsDivPolicy.style.display === 'none') {
+              contentsDivPolicy.style.display = 'block';
+              contentsArrowPolicy.style.transform = 'rotate(90deg)';
+            } else {
+              contentsDivPolicy.style.display = 'none';
+              contentsArrowPolicy.style.transform = 'rotate(0deg)';
+            }
+          });
+        </script>
+      </section>
 
       <section id="teaching">
         <h2>Teaching</h2>
-        <ul style="list-style:none; padding-left:0; margin-left:0;">
-          <li>Microeconomics I for undergraduate students (2022)</li>
-          <li>Microeconomics II for undergraduate students (2023)</li>
-          <li>Macroeconomics I for undergraduate students (2023-2024)</li>
-          <li>Development Economics for undergraduate students (2024-2026)</li>
-          <li>IZA/FCDO G²LM|LIC ONLINE Development Economics Course (2025)</li>
+        <hr style="border:none; border-top:1px solid rgba(0,0,0,0.6); margin:12px 0 20px 0;">
+        <ul style="list-style:none; padding-left:0; margin-left:0; font-size:0.9rem;">
+          <li style="margin-bottom:8px;"><strong>Microeconomics I</strong> (EC1A3) for undergraduate students at LSE, 2022–23</li>
+          <li style="margin-bottom:8px;"><strong>Microeconomics II</strong> (EC2A3) for undergraduate students at LSE, 2023–24</li>
+          <li style="margin-bottom:8px;"><strong>Macroeconomics I</strong> (EC1B3) for undergraduate students at LSE, 2022–24</li>
+          <li style="margin-bottom:8px;"><strong>Development Economics</strong> (EC307) for undergraduate students at LSE, 2024–26</li>
+          <li style="margin-bottom:8px;"><strong>Development Economics</strong> online course for IZA/FCDO G²LM|LIC, 2025–26</li>
         </ul>
       </section>
     </main>
