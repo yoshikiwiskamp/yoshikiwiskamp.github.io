@@ -99,6 +99,7 @@ button.pdf-button{
         <p style="margin:0; font-weight:normal; color:#777; font-size:0.9rem;">
           (with <a href="https://ignaciobanares.com" target="_blank" style="color:#777; text-decoration:none; pointer-events:auto;">Ignacio Banares-Sanchez</a>)
         </p>
+        <p style="margin:2px 0; font-weight:normal; color:rgb(1,80,140); font-size:0.9rem;"><a href="https://urbaneconomics.org/meetings/awards.html" target="_blank" style="color:rgb(1,80,140);">Best Student Paper at the 2026 Urban Economics Association European Meeting</a></p>
 
         <div style="margin:4px 0; font-size:0.9rem; color:rgb(1,80,140); display:flex; align-items:center; gap:4px;">
           <!-- Opening bracket -->
@@ -248,6 +249,41 @@ button.pdf-button{
             } else {
               contentsDivPolicy.style.display = 'none';
               contentsArrowPolicy.style.transform = 'rotate(0deg)';
+            }
+          });
+        </script>
+
+        <h3 style="margin-top:16px;">Policy options for expanding urban water and sanitation</h3>
+        <p style="margin:0; font-weight:normal; color:#777; font-size:0.9rem;">(with Ignacio Banares-Sanchez, Mikey Blake, Victoria Delbridge, and Edward Glaeser)</p>
+        <p style="margin:0; font-weight:normal; font-size:0.9rem;"><em>IGC Policy Toolkit, 2026</em></p>
+        <div style="margin:4px 0; font-size:0.9rem; color:rgb(1,80,140); display:flex; align-items:center; gap:4px;">
+          <span>[</span>
+          <a href="#" id="contents-link-policy2" style="display:flex; align-items:center; gap:4px; cursor:pointer;">
+            <span id="contents-arrow-policy2" style="transition: transform 0.2s;">▸</span>
+            Overview
+          </a>
+          <span style="color:(1,80,140);">|</span>
+          <a href="papers/Policy-Options-for-Expanding-Urban-Water-Sanitation-.pdf" target="_blank">Paper</a>
+          <span>]</span>
+        </div>
+
+        <div id="contents-text-policy2" style="display:none; border-left:4px solid rgba(1,80,140,0.8); padding:12px; margin-top:4px; background:#fafafa; border-radius:6px; text-align:justify;">
+          <p style="margin:2px 0; font-size:0.85rem;">Water, sanitation and hygiene (WASH) systems are fundamental to healthy and productive cities. Yet as urban populations grow rapidly, many cities struggle to expand and maintain safe water and sanitation services. Poor WASH infrastructure increases exposure to infectious disease, reduces labour productivity, and imposes disproportionate costs on low-income households. This policy brief outlines four key principles to help governments expand safe and affordable water and sanitation services in rapidly growing cities.</p>
+        </div>
+
+        <script>
+          const contentsLinkPolicy2 = document.getElementById('contents-link-policy2');
+          const contentsDivPolicy2 = document.getElementById('contents-text-policy2');
+          const contentsArrowPolicy2 = document.getElementById('contents-arrow-policy2');
+
+          contentsLinkPolicy2.addEventListener('click', (e) => {
+            e.preventDefault();
+            if (contentsDivPolicy2.style.display === 'none') {
+              contentsDivPolicy2.style.display = 'block';
+              contentsArrowPolicy2.style.transform = 'rotate(90deg)';
+            } else {
+              contentsDivPolicy2.style.display = 'none';
+              contentsArrowPolicy2.style.transform = 'rotate(0deg)';
             }
           });
         </script>
