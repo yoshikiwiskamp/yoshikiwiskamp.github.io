@@ -172,47 +172,14 @@ button.pdf-button{
             }
           });
         </script>
-      </section>
 
-      <section id="work-in-progress">
-        <h2>Work in Progress</h2>
-        <hr style="border:none; border-top:1px solid rgba(0,0,0,0.6); margin:12px 0 20px 0;">
-        <h3>Channeling Density: Sewerage Investments in 19th-Century Paris</h3>
-        <!-- <p style="margin:0; font-weight:normal; color:#777; font-size:0.9rem;">(with Ignacio Banares-Sanchez)</p> -->
-        
+        <h3 style="margin-top:16px;">Channeling Density: Sewers in 19th-Century Paris</h3>
         <p style="margin:0; font-weight:normal; color:#777; font-size:0.9rem;">
           (with <a href="https://ignaciobanares.com" target="_blank" style="color:#777; text-decoration:none; pointer-events:auto;">Ignacio Banares-Sanchez</a>)
         </p>
-
-        <div style="margin:4px 0; font-size:0.9rem; color:rgb(1,80,140); display:flex; align-items:center; gap:4px;">
-          <span>[</span>
-          <a href="#" id="abstract-link-paris" style="display:flex; align-items:center; gap:4px; cursor:pointer;">
-            <span id="abstract-arrow-paris" style="transition: transform 0.2s;">▸</span>
-            Abstract
-          </a>
-          <span>]</span>
+        <div style="margin:4px 0; font-size:0.9rem; color:#888;">
+          [<span>draft coming soon</span>]
         </div>
-
-        <div id="abstract-text-paris" style="display:none; border-left:4px solid rgba(1,80,140,0.8); padding:12px; margin-top:4px; background:#fafafa; border-radius:6px; text-align:justify;">
-          <p style="margin:2px 0; font-size:0.85rem;">Urban density promises agglomeration benefits but also gives rise to pollution and disease transmission. Large-scale sanitation investments may therefore be essential to harness the benefits of density by increasing the attractiveness of locations as residential and marketplaces and by reducing negative sanitation externalities. To study how sewerage investments shape the long-run development of cities, we compile a novel address-level dataset spanning the entire construction period of the Parisian sewerage network during the nineteenth century. We present event-study evidence on how sewer construction affected population density, firm locations, land values, and disease incidence. Preliminary findings suggest an increase in land values and an increased presence of service and retail businesses in locations that received sewer access during the main expansion period. Leveraging an urban model, we structurally estimate the impact of sewers on location-specific amenities and location–sector-specific productivity, as well as the strength of externalities. Through counterfactual analyses, we assess the welfare impacts and cost–benefit of sewerage investments and disentangle the general equilibrium channels through which sewerage investments shaped the development of modern Paris.</p>
-        </div>
-
-        <script>
-          const linkParis = document.getElementById('abstract-link-paris');
-          const abstractDivParis = document.getElementById('abstract-text-paris');
-          const arrowParis = document.getElementById('abstract-arrow-paris');
-
-          linkParis.addEventListener('click', (e) => {
-            e.preventDefault();
-            if (abstractDivParis.style.display === 'none') {
-              abstractDivParis.style.display = 'block';
-              arrowParis.style.transform = 'rotate(90deg)';
-            } else {
-              abstractDivParis.style.display = 'none';
-              arrowParis.style.transform = 'rotate(0deg)';
-            }
-          });
-        </script>
       </section>
 
       <section id="policy">
