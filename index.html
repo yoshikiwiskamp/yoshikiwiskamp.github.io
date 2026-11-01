@@ -107,6 +107,38 @@ a.chip:hover{background:#e6e6e4;border-color:#d6d6d3;color:rgb(59,130,157);}
   transition:border-color 0.25s;
 }
 .cv-btn:hover{border-color:rgb(59,130,157);}
+.teach-inst{
+  display:flex;
+  justify-content:space-between;
+  align-items:baseline;
+  flex-wrap:wrap;
+  gap:4px 12px;
+  margin-bottom:6px;
+}
+.teach-group{margin-bottom:22px;}
+.teach-group:last-child{margin-bottom:0;}
+.teach-inst h3{margin:0;}
+.teach-inst span{color:#777;font-size:0.85rem;}
+.teach-row{
+  margin:0 0 14px 0;
+  font-size:0.9rem;
+}
+.teach-head{
+  display:flex;
+  justify-content:space-between;
+  align-items:baseline;
+  flex-wrap:wrap;
+  gap:2px 12px;
+}
+.teach-head strong{font-weight:600;}
+.teach-years{color:#777;font-size:0.85rem;white-space:nowrap;}
+.teach-meta{color:#777;font-size:0.85rem;margin-top:2px;}
+.teach-meta .chip{margin-right:4px;}
+.item-bar{
+  padding:2px 0 2px 12px;
+  border-left:2px solid rgba(59,130,157,0.35);
+  margin-bottom:16px;
+}
 button.pdf-button{
   background:#1d4ed8;color:white;border:none;padding:8px;border-radius:6px;cursor:pointer;flex:1;text-align:center;text-decoration:none;
 }
@@ -221,6 +253,7 @@ button.pdf-button{
       <section id="work-in-progress">
         <h2>Work in Progress</h2>
         <hr style="border:none; border-top:1px solid rgba(0,0,0,0.6); margin:12px 0 20px 0;">
+        <div class="item-bar">
         <h3>Golden Traps: Self-Reinforcing Dynamics of Artisanal Mining</h3>
         <p style="margin:0; font-weight:normal; color:#777; font-size:0.9rem;">with <a href="https://www.lse.ac.uk/people/sreevidya-ayyar" target="_blank" style="color:#777; text-decoration:none; pointer-events:auto;">Sreevidya Ayyar</a> and <a href="https://www.lse.ac.uk/people/hema-balarama" target="_blank" style="color:#777; text-decoration:none; pointer-events:auto;">Hemawathy Balarama</a></p>
 
@@ -233,6 +266,7 @@ button.pdf-button{
 
         <div id="funders-text-gt" style="display:none; border-left:4px solid rgba(59,130,157,0.8); padding:12px; margin-top:4px; background:#fafafa; border-radius:6px; text-align:justify;">
           <p style="margin:2px 0; font-size:0.85rem;"><strong>Partners:</strong> Structural Transformation and Economic Growth</p>
+        </div>
         </div>
 
         <script>
@@ -256,6 +290,7 @@ button.pdf-button{
       <section id="policy">
         <h2>Policy Work</h2>
         <hr style="border:none; border-top:1px solid rgba(0,0,0,0.6); margin:12px 0 20px 0;">
+        <div class="item-bar">
         <h3>Urban water and sanitation systems: Managing infrastructure, institutions and access</h3>
         <p style="margin:0; font-weight:normal; color:#777; font-size:0.9rem;">with Ignacio Banares-Sanchez, Mikey Blake, Victoria Delbridge, and Edward Glaeser</p>
         <p style="margin:0; font-weight:normal; font-size:0.9rem;"><em>IGC Synthesis Paper, 2026</em></p>
@@ -269,6 +304,7 @@ button.pdf-button{
 
         <div id="contents-text-policy" style="display:none; border-left:4px solid rgba(59,130,157,0.8); padding:12px; margin-top:4px; background:#fafafa; border-radius:6px; text-align:justify;">
           <p style="margin:2px 0; font-size:0.85rem;">This paper focuses on how city leaders can deliver clean water and sanitation efficiently, affordably, and at scale. It first explores how to choose the right technologies for different urban contexts, balancing cost, density, and long-term maintenance. It then considers who should provide these services, from public utilities to public–private partnerships and informal providers, and how governments can structure their involvement. The paper next examines how to finance water and sanitation systems, from major trunk infrastructure to household connections and ongoing maintenance, and how to incentivise household uptake through subsidies, fines, and microfinance. It also looks at how to shape behaviour through information campaigns and social norms, and how to strengthen institutions, regulation, and contracting to make these systems work sustainably. Together, these sections provide a roadmap for cities to turn water and sanitation investment into lasting health, productivity, and environmental gains.</p>
+        </div>
         </div>
 
         <script>
@@ -288,7 +324,8 @@ button.pdf-button{
           });
         </script>
 
-        <h3 style="margin-top:16px;">Policy options for expanding urban water and sanitation</h3>
+        <div class="item-bar">
+        <h3>Policy options for expanding urban water and sanitation</h3>
         <p style="margin:0; font-weight:normal; color:#777; font-size:0.9rem;">with Ignacio Banares-Sanchez, Mikey Blake, Victoria Delbridge, and Edward Glaeser</p>
         <p style="margin:0; font-weight:normal; font-size:0.9rem;"><em>IGC Policy Toolkit, 2026</em></p>
         <div class="chip-row">
@@ -301,6 +338,7 @@ button.pdf-button{
 
         <div id="contents-text-policy2" style="display:none; border-left:4px solid rgba(59,130,157,0.8); padding:12px; margin-top:4px; background:#fafafa; border-radius:6px; text-align:justify;">
           <p style="margin:2px 0; font-size:0.85rem;">Water, sanitation and hygiene (WASH) systems are fundamental to healthy and productive cities. Yet as urban populations grow rapidly, many cities struggle to expand and maintain safe water and sanitation services. Poor WASH infrastructure increases exposure to infectious disease, reduces labour productivity, and imposes disproportionate costs on low-income households. This policy brief outlines four key principles to help governments expand safe and affordable water and sanitation services in rapidly growing cities.</p>
+        </div>
         </div>
 
         <script>
@@ -324,13 +362,43 @@ button.pdf-button{
       <section id="teaching">
         <h2>Teaching</h2>
         <hr style="border:none; border-top:1px solid rgba(0,0,0,0.6); margin:12px 0 20px 0;">
-        <ul style="list-style:none; padding-left:0; margin-left:0; font-size:0.9rem;">
-          <li style="margin-bottom:8px;"><strong>Development Economics</strong> online course for IZA/FCDO G²LM|LIC, 2025–26</li>
-          <li style="margin-bottom:8px;"><strong>Development Economics</strong> (EC307) for undergraduate students at LSE, 2024–26</li>
-          <li style="margin-bottom:8px;"><strong>Macroeconomics I</strong> (EC1B3) for undergraduate students at LSE, 2022–24</li>
-          <li style="margin-bottom:8px;"><strong>Microeconomics I</strong> (EC1A3) for undergraduate students at LSE, 2022–23</li>
-          <li style="margin-bottom:8px;"><strong>Microeconomics II</strong> (EC2A3) for undergraduate students at LSE, 2023–24</li>
-        </ul>
+        <div class="teach-group">
+          <div class="teach-row">
+            <div class="teach-head">
+              <span><strong>Development Economics</strong></span>
+              <span class="teach-years">2025–26</span>
+            </div>
+            <div class="teach-meta">Online course for IZA/FCDO G²LM|LIC</div>
+          </div>
+          <div class="teach-row">
+            <div class="teach-head">
+              <span><strong>Development Economics</strong></span>
+              <span class="teach-years">2024–26</span>
+            </div>
+            <div class="teach-meta"><span class="chip chip-muted">EC307</span> Undergraduate course at LSE</div>
+          </div>
+          <div class="teach-row">
+            <div class="teach-head">
+              <span><strong>Microeconomics II</strong></span>
+              <span class="teach-years">2023–24</span>
+            </div>
+            <div class="teach-meta"><span class="chip chip-muted">EC2A3</span> Undergraduate course at LSE</div>
+          </div>
+          <div class="teach-row">
+            <div class="teach-head">
+              <span><strong>Macroeconomics I</strong></span>
+              <span class="teach-years">2022–24</span>
+            </div>
+            <div class="teach-meta"><span class="chip chip-muted">EC1B3</span> Undergraduate course at LSE</div>
+          </div>
+          <div class="teach-row">
+            <div class="teach-head">
+              <span><strong>Microeconomics I</strong></span>
+              <span class="teach-years">2022–23</span>
+            </div>
+            <div class="teach-meta"><span class="chip chip-muted">EC1A3</span> Undergraduate course at LSE</div>
+          </div>
+        </div>
       </section>
     </main>
   </div>
