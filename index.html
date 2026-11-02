@@ -182,8 +182,34 @@ button.pdf-button{
           with <a href="https://ignaciobanares.com" target="_blank" style="color:#777; text-decoration:none; pointer-events:auto;">Ignacio Banares-Sanchez</a>
         </p>
         <div class="chip-row">
+          <a href="#" id="abstract-link-jmp" class="chip" style="cursor:pointer;">
+            <span id="abstract-arrow-jmp" style="transition: transform 0.2s;">▸</span>
+            Abstract
+          </a>
           <span class="chip chip-muted">draft coming soon</span>
         </div>
+
+        <!-- Hidden abstract text -->
+        <div id="abstract-text-jmp" style="display:none; border-left:4px solid rgba(59,130,157,0.8); padding:12px; margin-top:4px; background:#fafafa; border-radius:6px; text-align:justify;">
+          <p style="margin:2px 0; font-size:0.85rem;">Urban density promises agglomeration benefits but also exacerbates pollution and disease transmission. Sanitation infrastructure may therefore be essential for cities to sustain dense concentrations of residents and firms and realise the benefits of density. To study how sanitation investments shape urban development, we compile a novel address-level dataset covering the construction of the Parisian sewer network in the nineteenth century. Exploiting within-neighbourhood variation in the timing of sewer connections in an event-study design, we find that connecting a parcel to the sewer network increases both population and firm counts. Sewer connections in nearby locations generate additional increases, with larger spillovers in more densely populated areas. We incorporate these findings into a quantitative urban model and estimate that sewer access increases residential amenity values by 2.5% and firm productivity by 5% in connected locations. The quantitative analysis further reveals that the net externalities of urban density depend on sanitation. In unsewered areas, additional people raise others’ utility at low levels of neighbourhood density but lower it at higher levels, as pollution costs intensify. Counterfactuals indicate that sewerage investments account for 30% of Paris’ population increase in the second half of the nineteenth century. One-quarter of this effect operates through reductions in negative sanitation externalities, while the remainder reflects the private benefits of sewer access in connected locations. These findings highlight how sanitation infrastructure can enable urban growth by mitigating the costs of density.</p>
+        </div>
+
+        <script>
+          const abstractLinkJMP = document.getElementById('abstract-link-jmp');
+          const abstractDivJMP = document.getElementById('abstract-text-jmp');
+          const abstractArrowJMP = document.getElementById('abstract-arrow-jmp');
+
+          abstractLinkJMP.addEventListener('click', (e) => {
+            e.preventDefault();
+            if (abstractDivJMP.style.display === 'none') {
+              abstractDivJMP.style.display = 'block';
+              abstractArrowJMP.style.transform = 'rotate(90deg)';
+            } else {
+              abstractDivJMP.style.display = 'none';
+              abstractArrowJMP.style.transform = 'rotate(0deg)';
+            }
+          });
+        </script>
         </div>
 
         <div class="paper-card">
