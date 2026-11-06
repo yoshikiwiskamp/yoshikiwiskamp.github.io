@@ -285,11 +285,23 @@ button.pdf-button{
         <p style="margin:0; font-weight:normal; color:#777; font-size:0.9rem;">with <a href="https://www.lse.ac.uk/people/sreevidya-ayyar" target="_blank" style="color:#777; text-decoration:none; pointer-events:auto;">Sreevidya Ayyar</a> and <a href="https://www.lse.ac.uk/people/hema-balarama" target="_blank" style="color:#777; text-decoration:none; pointer-events:auto;">Hemawathy Balarama</a></p>
 
         <div class="chip-row">
+          <!-- Abstract commented out for now (6 Nov 2026)
+          <a href="#" id="abstract-link-gt" class="chip" style="cursor:pointer;">
+            <span id="abstract-arrow-gt" style="transition: transform 0.2s;">&#9656;</span>
+            Abstract
+          </a>
+          -->
           <a href="#" id="funders-link-gt" class="chip" style="cursor:pointer;">
             <span id="funders-arrow-gt" style="transition: transform 0.2s;">&#9656;</span>
             Partners
           </a>
         </div>
+
+        <!-- Hidden abstract text, commented out for now (6 Nov 2026)
+        <div id="abstract-text-gt" style="display:none; border-left:4px solid rgba(59,130,157,0.8); padding:12px; margin-top:4px; background:#fafafa; border-radius:6px; text-align:justify;">
+          <p style="margin:2px 0; font-size:0.85rem;">Transient shocks, such as weather and global commodity price fluctuations, increasingly drive land-use transitions in developing economies. Where land-use decisions generate externalities, small deviations from the status quo can trigger self-reinforcing dynamics that lead to large and potentially irreversible transitions between equilibria. To what extent are land-use changes driven by individual, poverty-driven decisions versus spatial externalities and strategic complementarities? And how can policy interventions facilitate coordination towards the socially optimal use of land? This project examines these questions in the context of the shift from agriculture to illegal artisanal mining, which employs 45 million households in Sub-Saharan Africa and has led to devastating land degradation, water pollution, and irreversible loss of forests. We assemble a novel dataset combining remote-sensing data and administrative records to document the spatial and temporal spread of mining activity and its determinants in Ghana. Building on these data, we will estimate a structural model of land-use decisions to quantify how environmental externalities, market forces, and community characteristics shape the transition from agriculture to mining. We will use the model to identify how and when policy interventions can align land-use decisions with socially optimal outcomes, preventing costly and potentially irreversible land degradation.</p>
+        </div>
+        -->
 
         <div id="funders-text-gt" style="display:none; border-left:4px solid rgba(59,130,157,0.8); padding:12px; margin-top:4px; background:#fafafa; border-radius:6px; text-align:justify;">
           <p style="margin:2px 0; font-size:0.85rem;"><strong>Partners:</strong> Structural Transformation and Economic Growth</p>
@@ -297,6 +309,23 @@ button.pdf-button{
         </div>
 
         <script>
+          /* Abstract toggle commented out for now (6 Nov 2026)
+          const abstractLinkGT = document.getElementById('abstract-link-gt');
+          const abstractDivGT = document.getElementById('abstract-text-gt');
+          const abstractArrowGT = document.getElementById('abstract-arrow-gt');
+
+          abstractLinkGT.addEventListener('click', (e) => {
+            e.preventDefault();
+            if (abstractDivGT.style.display === 'none') {
+              abstractDivGT.style.display = 'block';
+              abstractArrowGT.style.transform = 'rotate(90deg)';
+            } else {
+              abstractDivGT.style.display = 'none';
+              abstractArrowGT.style.transform = 'rotate(0deg)';
+            }
+          });
+          */
+
           const fundersLinkGT = document.getElementById('funders-link-gt');
           const fundersDivGT = document.getElementById('funders-text-gt');
           const fundersArrowGT = document.getElementById('funders-arrow-gt');
@@ -312,6 +341,43 @@ button.pdf-button{
             }
           });
         </script>
+
+        <div class="item-bar">
+        <h3>A Century of Mis(sed)-Treatment: Toxic Waters and Unequal Urban Development</h3>
+        <p style="margin:0; font-weight:normal; color:#777; font-size:0.9rem;">with <a href="https://ignaciobanares.com" target="_blank" style="color:#777; text-decoration:none; pointer-events:auto;">Ignacio Banares-Sanchez</a></p>
+
+        <!-- Abstract commented out for now (6 Nov 2026)
+        <div class="chip-row">
+          <a href="#" id="abstract-link-tw" class="chip" style="cursor:pointer;">
+            <span id="abstract-arrow-tw" style="transition: transform 0.2s;">&#9656;</span>
+            Abstract
+          </a>
+        </div>
+
+        <div id="abstract-text-tw" style="display:none; border-left:4px solid rgba(59,130,157,0.8); padding:12px; margin-top:4px; background:#fafafa; border-radius:6px; text-align:justify;">
+          <p style="margin:2px 0; font-size:0.85rem;">Over 80% of the world’s wastewater is discharged into the environment untreated. While cities have long prioritised providing clean water and sewer access to their residents, treating wastewater has remained a secondary concern. As a result, rivers, lakes and coastlines can remain polluted for decades, and as cities expand, these areas are eventually absorbed by urban growth. We study the long-run consequences of this pollution in Paris, where sewage was discharged into the Seine downstream of the city from the 1860s onwards. These discharges caused a sharp deterioration in water quality around the outfall, documented in one of the earliest systematic water analyses in 1871. Using newly digitised nineteenth-century cadastral records, we show that the onset of discharges led to the emergence of discontinuities in land values and land use around the discharge point. Wastewater treatment was introduced only in the 1980s, nearly a century later. Although water quality around the outfall has since recovered, the effects of historical pollution on urban development persist today, with house prices remaining 13% lower downstream of the outfall. Our findings highlight the long-run consequences of untreated wastewater discharges and show how historical pollution can shape urban development long after environmental conditions have improved.</p>
+        </div>
+        -->
+        </div>
+
+        <!-- Abstract toggle commented out for now (6 Nov 2026)
+        <script>
+          const abstractLinkTW = document.getElementById('abstract-link-tw');
+          const abstractDivTW = document.getElementById('abstract-text-tw');
+          const abstractArrowTW = document.getElementById('abstract-arrow-tw');
+
+          abstractLinkTW.addEventListener('click', (e) => {
+            e.preventDefault();
+            if (abstractDivTW.style.display === 'none') {
+              abstractDivTW.style.display = 'block';
+              abstractArrowTW.style.transform = 'rotate(90deg)';
+            } else {
+              abstractDivTW.style.display = 'none';
+              abstractArrowTW.style.transform = 'rotate(0deg)';
+            }
+          });
+        </script>
+        -->
       </section>
 
       <section id="policy">
